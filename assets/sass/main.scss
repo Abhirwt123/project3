@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Jost', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1240px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.btn {
+    padding: 8px 20px;
+    color: white;
+    background-color: #FF651C;
+    box-shadow: 6px 6px 0 -1px #373737;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: .3s all;
+
+    &:hover {
+        background-color: #373737;
+        box-shadow: 6px 6px 0 -1px #FF651C;
+        cursor: pointer;
+    }
+}
+
+// header
+
+header {
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 9;
+
+    .header_wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 0;
+        position: relative;
+
+        .mid_section {
+            nav {
+                ul {
+                    display: flex;
+                    gap: 40px;
+
+                    li {
+                        list-style: none;
+                        position: relative;
+
+                        a {
+                            text-decoration: none;
+                            font-size: 14px;
+                            color: black;
+                            font-weight: 600;
+                            letter-spacing: 3px;
+                            text-transform: uppercase;
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                display: inline-block;
+                                width: 0;
+                                top: 22px;
+                                height: 2px;
+                                left: 0px;
+                                background-color: #FF651C;
+                                transition: .3s all;
+                            }
+                            &:hover::after{
+                                width: 100%;
+                            }
+                            &:hover{
+                                color: #FF651C;
+                            }
+                        }
+                        #home{
+                            color: #FF651C;
+                        }
+                        
+                    }
+                }
+            }
+
+            @media screen and (max-width: 968px) {
+                display: none;
+            }
+        }
+
+        .right_section {
+            @media screen and (max-width: 968px) {
+                display: none;
+            }
+        }
+        .mobile_menu{
+
+            .icon{
+                i{
+                    font-size: 20px;
+                }
+            }
+        }
+
+    }
+
+    @media screen and (max-width: 968px) {
+        padding: 10px;
+    }
+}
+
+// banner
+.banner {
+    padding: 48px 12px;
+    position: relative;
+    background-color: rgba(254, 196, 72, 0.1);
+
+    .banner_wrap {
+        display: flex;
+        align-items: center;
+
+        @media screen and (max-width: 968px) {
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .left_sec {
+            flex-basis: 48%;
+
+            .name {
+                font-size: 18px;
+                font-weight: 500;
+                margin-bottom: 10px;
+            }
+
+            .profile {
+                font-size: 70px;
+                font-weight: 500;
+            }
+
+            .from {
+                margin: 10px 0;
+                color: grey;
+                font-size: 20px;
+            }
+
+            .let_start {
+                display: flex;
+
+                @media screen and (max-width: 968px) {
+                    justify-content: center;
+                }
+            }
+
+            @media screen and (max-width: 968px) {
+                flex-basis: 100%;
+            }
+        }
+
+        .right_img_sec {
+            flex-basis: 48%;
+
+            .img_box {
+                width: 590px;
+                height: 560px;
+
+                img {
+                    width: 100%;
+                }
+
+                @media screen and (max-width: 968px) {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            @media screen and (max-width: 968px) {
+                flex-basis: 100%;
+            }
+        }
+    }
+
+    @media screen and (max-width: 968px) {
+        padding: 10px;
+    }
+}
+
+// slider
+.slider {
+    background-color: #373737;
+    padding: 24px 10px;
+
+    .bx-wrapper {
+        max-width: 100% !important;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        border: none;
+        background: none;
+        margin-bottom:0 !important;
+
+        .bx-controls {
+            display: none !important;
+        }
+    }
+}
+
+// about
+
+.about {
+    padding: 48px 12px;
+
+    .about_wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .left_img_sec {
+            flex-basis: 45%;
+
+            @media screen and (max-width: 968px) {
+                flex-basis: 100%;
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .right_info_sec {
+            flex-basis: 45%;
+
+            .exp {
+                font-size: 40px;
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+
+            .about_myself {
+                font-size: 18px;
+            }
+
+            .my_work_sec {
+                display: flex;
+                padding: 15px;
+
+                .count {
+                    font-size: 26px;
+                    font-weight: bold;
+                    color: #FF651C;
+                }
+
+                .client {
+                    margin-left: 40px;
+                }
+            }
+
+            .btn_box {
+                display: flex;
+                gap: 20px;
+
+                .portfolio_btn {
+                    box-shadow: 6px 6px 0 -1px #FF651C;
+                    background: #373737;
+                    &:hover {
+                        background-color: #FF651C;
+                        box-shadow: 6px 6px 0 -1px #373737;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            @media screen and (max-width: 968px) {
+                flex-basis: 100%;
+            }
+        }
+
+        @media screen and (max-width: 968px) {
+            flex-direction: column;
+        }
+    }
+
+    @media screen and (max-width: 968px) {
+        padding: 10px;
+    }
+}
+
+// skills
+
+.my_skills {
+    padding: 48px 12px;
+
+    .my_skills_wrap {
+        display: flex;
+        justify-content: space-between;
+
+        .left_skills_sec {
+            flex-basis: 48%;
+
+            .heading {
+                font-size: 50px;
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+
+            .skills_set {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 15px;
+
+                .skill_box {
+                    box-shadow: none;
+                    border: 2px solid black;
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                    transition: .5s all;
+
+                    &:hover {
+                        box-shadow: 6px 6px 0 -1px #373737;
+                    }
+                }
+
+                .html {
+                    background-color: #9BD3D0;
+                }
+
+                .img_box {
+                    border: 1px solid black;
+                    padding: 8px;
+                    background-color: white;
+                }
+
+                .css {
+                    background-color: #FEC447;
+                }
+
+                .react {
+                    background-color: #FECCB5;
+                }
+
+                .angular {
+                    background-color: #92B5FF;
+                }
+
+                .ios {
+                    background-color: #C4D39B;
+                }
+
+                .dev {
+                    background-color: #D2CEFF;
+                }
+            }
+        }
+
+        .right_img_sec {
+            flex-basis: 48%;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 968px) {
+            flex-direction: column;
+        }
+    }
+
+    @media screen and (max-width: 968px) {
+        padding: 10px;
+    }
+}
